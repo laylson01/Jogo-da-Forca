@@ -2,20 +2,33 @@
 #include <string>
 using namespace std;
 
+const string PALAVRA_SECRET = "MELANCIA";
 
-bool letra_existe(char chute){
+bool letra_existe(char chute)
+{
+    for (int i = 0; i < PALAVRA_SECRET.size(); i++)
+        if (chute == PALAVRA_SECRET[i])
+        {
+            return true;
+        }
+    return false;
+}
 
-} 
+/* M E L A N C I A
+0 1 0 1 0 1 0 1
 
-// M E L A N C I A
-//0 1 0 1 0 1 0 1
+
+PALAVRA_SECRET
+
+
+
+*/
 int main()
 {
 
     //cout << "hello world" << endl;
-    // char palavra_secret = [20]; Old way
-    string palavra_secret = "MELANCIA";
-    cout << palavra_secret << endl;
+    // char PALAVRA_SECRET = [20]; Old way
+    cout << PALAVRA_SECRET << endl;
 
     bool n_acertou = true;
     bool n_enforcou = true;
